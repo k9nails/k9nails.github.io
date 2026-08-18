@@ -3,40 +3,105 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>K9 Nails — Mobile Nail Trimming</title>
-<meta name="description" content="K9 Nails — mobile dog nail trimming on the Mendocino Coast and inland Mendocino County, California.">
+<title>K9 Nails &mdash; Mobile Nail Trimming</title>
+<meta name="description" content="K9 Nails — mobile dog nail trimming on the Northern California coast. Popup nail trims in Fort Bragg, Point Arena, Gualala, Sea Ranch, Ukiah, Willits and beyond.">
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
-
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="K9 Nails">
 <meta property="og:title" content="K9 Nails — Mobile Nail Trimming">
-<meta property="og:description" content="Mobile dog nail trimming in Mendocino County, California.">
+<meta property="og:description" content="K9 Nails — mobile dog nail trimming on the Northern California coast. Popup nail trims in Fort Bragg, Point Arena, Gualala, Sea Ranch, Ukiah, Willits and beyond.">
 <meta property="og:url" content="https://www.k9nails.com/">
 <meta property="og:image" content="https://www.k9nails.com/assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petrona:wght@700&family=Nunito+Sans:wght@400&display=swap">
+<style>
+/* K9 Nails — one page, no framework.
+   Palette (from the logo): mint #CEFEE3, bubblegum #FFB6D3, coal #202020, link blue #0A5FA0.
+   Rules: color goes behind things, coal goes on top. All text is coal; links are blue.
+   One visual language: plain document. Serif headings, coal body text, underlined blue links. */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:#FFFFFF;
+  color:#202020;
+  font-family:"Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:1.0625rem;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.band{
+  background:#CEFEE3;
+  border-bottom:6px solid #FFB6D3; /* the only pink on the page: behind/under things, never text */
+  padding:30px 22px;
+}
+.band-inner,.main-inner{max-width:620px; margin:0 auto}
+.band-inner{display:flex; align-items:center; gap:18px; flex-wrap:wrap}
+.logo{width:96px; height:96px; flex:none; display:block}
+h1{
+  font-family:Petrona,Georgia,"Times New Roman",serif;
+  font-weight:700; font-size:2.25rem; line-height:1.1;
+  margin:0; color:#202020;
+}
+.tagline{margin:2px 0 0}
+main{padding:34px 22px 44px}
+h2{
+  font-family:Petrona,Georgia,"Times New Roman",serif;
+  font-weight:700; font-size:1.375rem; line-height:1.25;
+  margin:0 0 8px; color:#202020;
+}
+section{margin:0 0 30px}
+section:last-of-type{margin-bottom:0}
+p{margin:0 0 6px}
+p:last-child{margin-bottom:0}
+a{color:#0A5FA0}
+:focus-visible{outline:3px solid #0A5FA0; outline-offset:2px}
+@media (max-width:400px){
+  h1{font-size:1.9rem}
+  .logo{width:80px; height:80px}
+}
+</style>
 </head>
 <body>
 
-<header>
-  <img src="assets/logo.png" alt="K9 Nails logo: a pink dog's head with blue markings" width="300" height="300">
-  <h1>K9 Nails</h1>
-  <p>Mobile Nail Trimming</p>
+<header class="band">
+  <div class="band-inner">
+    <img class="logo" src="assets/logo.png" alt="K9 Nails logo: a pink dog's head with blue markings" width="96" height="96">
+    <div>
+      <h1>K9 Nails</h1>
+      <p class="tagline">Mobile Nail Trimming</p>
+    </div>
+  </div>
 </header>
 
 <main>
+  <div class="main-inner">
 
-  <section>
-    <h2>Questions?</h2>
-    <p>Shoot me an email: <a href="mailto:k9nails@gmail.com">k9nails@gmail.com</a></p>
-  </section>
+    <section>
+      <h2>Serving the Northern California coast</h2>
+      <p>Fort Bragg, Point Arena, Gualala, Sea Ranch, Ukiah, Willits, and beyond.</p>
+    </section>
 
-  <p>Thanks for visiting!</p>
+    <section>
+      <h2>Popup dates</h2>
+      <p>I set up at feed stores, coffee shops, and other local spots. Dates go out by email or text.</p>
+      <p>Shoot me an email to get on the list, or with any questions.</p>
+      <p><a href="mailto:k9nails@gmail.com">k9nails@gmail.com</a></p>
+    </section>
 
+    <section>
+      <h2>Follow along</h2>
+      <p><a href="https://www.instagram.com/k9.nails/">@k9.nails on Instagram</a></p>
+    </section>
+
+    <section>
+      <p>Thanks for visiting!</p>
+    </section>
+
+  </div>
 </main>
-
-<footer>
-  <p><small>&copy; K9 Nails</small></p>
-</footer>
 
 </body>
 </html>
