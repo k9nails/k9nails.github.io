@@ -20,12 +20,21 @@ succeeded.
 | File | What it is |
 | --- | --- |
 | `index.html` | The entire website. |
-| `CNAME` | Tells GitHub the site lives at `www.k9nails.com`. **Do not delete** — the custom domain stops working without it. |
 | `assets/logo.png` | The logo. |
 | `assets/favicon.png` | The little icon in the browser tab. |
 
 ## Hosting
 
 - GitHub Pages, deployed from the `main` branch on every push.
-- Custom domain `www.k9nails.com`, HTTPS via GitHub's free certificate.
-- DNS is managed at the domain registrar; `www` is a CNAME to the GitHub Pages host.
+- Currently served at <https://k9nails.github.io>.
+
+### Not yet switched over to k9nails.com
+
+`www.k9nails.com` still points at the old Squarespace site. To cut over:
+
+1. Add a file named `CNAME` at the top level of this repo containing exactly:
+   `www.k9nails.com`
+2. At the domain registrar, point `www` (CNAME) at `k9nails.github.io`, and
+   point the bare domain (A records) at `185.199.108.153`, `185.199.109.153`,
+   `185.199.110.153`, `185.199.111.153`.
+3. Once that resolves, turn on **Enforce HTTPS** in Settings -> Pages.
