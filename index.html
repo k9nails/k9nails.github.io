@@ -40,20 +40,14 @@ body{
 }
 .band-inner,.main-inner{max-width:620px; margin:0 auto}
 /* Dog, wordmark and tagline are one lockup. The lockup's width is the only size knob:
-   every child is sized in cqw against it, so the three scale together at any viewport. */
-.lockup{width:260px; max-width:100%; margin:0 auto; container-type:inline-size}
+   the text lines are SVG (arched on a dome echoing the dog's arc) and scale with it. */
+.lockup{width:260px; max-width:100%; margin:0 auto}
 .logo{width:92%; height:auto; display:block; margin:0 auto}
-h1{
-  font-family:Petrona,Georgia,"Times New Roman",serif;
-  font-weight:700; font-size:4.25rem; line-height:1.05;
-  margin:0;
-  color:#202020;
-}
-.tagline{margin:2px 0 0; font-size:1.5rem; line-height:1.2}
-@container (min-width:0px){
-  h1{font-size:26cqw; margin-top:0.75cqw}
-  .tagline{font-size:8.5cqw; margin-top:3cqw}
-}
+h1{margin:0.75% 0 0}
+.tagline{margin:3% 0 0}
+h1 svg,.tagline svg{display:block; width:100%; overflow:visible}
+h1 text{font:700 65px Petrona,Georgia,"Times New Roman",serif; fill:#202020}
+.tagline text{font:400 22px "Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; fill:#202020}
 main{padding:34px 22px 44px}
 h2{
   font-family:Petrona,Georgia,"Times New Roman",serif;
@@ -84,8 +78,8 @@ a.btn:hover{background:#FFA1C7}
   <div class="band-inner">
     <div class="lockup">
       <img class="logo" src="assets/logo.svg" alt="K9 Nails logo: a cream and tan dog waving one paw" width="260" height="205">
-      <h1>k9 nails</h1>
-      <p class="tagline">Mobile Nail Trimming</p>
+      <h1><svg viewBox="0 0 260 80" role="img" aria-label="k9 nails"><path id="wordmark-arc" d="M2 72 Q130 56 258 72" fill="none"/><text><textPath href="#wordmark-arc" startOffset="50%" text-anchor="middle">k9 nails</textPath></text></svg></h1>
+      <p class="tagline"><svg viewBox="0 0 260 30" role="img" aria-label="Mobile Nail Trimming"><path id="tagline-arc" d="M2 26 Q130 16 258 26" fill="none"/><text><textPath href="#tagline-arc" startOffset="50%" text-anchor="middle">Mobile Nail Trimming</textPath></text></svg></p>
     </div>
   </div>
 </header>
