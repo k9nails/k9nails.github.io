@@ -38,11 +38,11 @@ body{
   text-align:center;
 }
 /* The pink rule under the band: a fixed 3200px shape the viewport center-crops, never
-   stretched. Exact r=1100 parabola at the crest (matching the lockup), transitioning
-   tangentially into straight descending tails (slope 0.12) — the curve keeps dipping at
-   every width, but linearly, so wide screens get a sweep rather than a circle's plunge.
-   Linear tails make the needed strip height exactly 6vw. Pink is a constant 6px. */
-.band-curve{height:calc(6vw); overflow:hidden; position:relative; margin-top:-1px}
+   stretched. Exact r=1100 curvature at the crest (matching the lockup), bell easing with
+   a far asymptote (cap 150) so the tails are still visibly descending at any on-screen
+   width and only level off beyond the page edge. Pink is a constant 6px. Strip height
+   tracks the visible depth (linear approximation, clamped). */
+.band-curve{height:clamp(22px, 10vw - 12px, 160px); overflow:hidden; position:relative; margin-top:-1px}
 .band-curve svg{position:absolute; left:50%; transform:translateX(-50%); display:block}
 .band-curve svg{position:absolute; left:50%; transform:translateX(-50%); display:block}
 .band-inner,.main-inner{max-width:620px; margin:0 auto}
@@ -90,7 +90,7 @@ a.btn:hover{background:#FFA1C7}
   </div>
 </header>
 
-<div class="band-curve" aria-hidden="true"><svg viewBox="0 0 3200 191" width="3200" height="191"><path d="M0 190.1 L1468 13.9 Q1600 -1.9 1732 13.9 L3200 190.1 L3200 0 L0 0 Z" fill="#FFB6D3"/><path d="M0 184.1 L1468 7.9 Q1600 -7.9 1732 7.9 L3200 184.1 L3200 0 L0 0 Z" fill="#CEFEE3"/></svg></div>
+<div class="band-curve" aria-hidden="true"><svg viewBox="0 0 3200 157" width="3200" height="157" aria-hidden="true"><path d="M0 155.9 L25 155.9 L50 155.9 L75 155.9 L100 155.8 L125 155.8 L150 155.7 L175 155.7 L200 155.6 L225 155.5 L250 155.4 L275 155.3 L300 155.1 L325 154.9 L350 154.7 L375 154.4 L400 154.1 L425 153.7 L450 153.3 L475 152.8 L500 152.2 L525 151.5 L550 150.7 L575 149.8 L600 148.8 L625 147.6 L650 146.3 L675 144.8 L700 143.1 L725 141.3 L750 139.2 L775 136.9 L800 134.4 L825 131.7 L850 128.7 L875 125.5 L900 122.0 L925 118.3 L950 114.3 L975 110.1 L1000 105.6 L1025 100.9 L1050 96.0 L1075 90.9 L1100 85.7 L1125 80.3 L1150 74.8 L1175 69.2 L1200 63.6 L1225 58.0 L1250 52.5 L1275 47.1 L1300 41.8 L1325 36.7 L1350 31.9 L1375 27.3 L1400 23.1 L1425 19.3 L1450 15.9 L1475 12.9 L1500 10.5 L1525 8.5 L1550 7.1 L1575 6.3 L1600 6.0 L1625 6.3 L1650 7.1 L1675 8.5 L1700 10.5 L1725 12.9 L1750 15.9 L1775 19.3 L1800 23.1 L1825 27.3 L1850 31.9 L1875 36.7 L1900 41.8 L1925 47.1 L1950 52.5 L1975 58.0 L2000 63.6 L2025 69.2 L2050 74.8 L2075 80.3 L2100 85.7 L2125 90.9 L2150 96.0 L2175 100.9 L2200 105.6 L2225 110.1 L2250 114.3 L2275 118.3 L2300 122.0 L2325 125.5 L2350 128.7 L2375 131.7 L2400 134.4 L2425 136.9 L2450 139.2 L2475 141.3 L2500 143.1 L2525 144.8 L2550 146.3 L2575 147.6 L2600 148.8 L2625 149.8 L2650 150.7 L2675 151.5 L2700 152.2 L2725 152.8 L2750 153.3 L2775 153.7 L2800 154.1 L2825 154.4 L2850 154.7 L2875 154.9 L2900 155.1 L2925 155.3 L2950 155.4 L2975 155.5 L3000 155.6 L3025 155.7 L3050 155.7 L3075 155.8 L3100 155.8 L3125 155.9 L3150 155.9 L3175 155.9 L3200 155.9 L3200 0 L0 0 Z" fill="#FFB6D3"/><path d="M0 149.9 L25 149.9 L50 149.9 L75 149.9 L100 149.8 L125 149.8 L150 149.7 L175 149.7 L200 149.6 L225 149.5 L250 149.4 L275 149.3 L300 149.1 L325 148.9 L350 148.7 L375 148.4 L400 148.1 L425 147.7 L450 147.3 L475 146.8 L500 146.2 L525 145.5 L550 144.7 L575 143.8 L600 142.8 L625 141.6 L650 140.3 L675 138.8 L700 137.1 L725 135.3 L750 133.2 L775 130.9 L800 128.4 L825 125.7 L850 122.7 L875 119.5 L900 116.0 L925 112.3 L950 108.3 L975 104.1 L1000 99.6 L1025 94.9 L1050 90.0 L1075 84.9 L1100 79.7 L1125 74.3 L1150 68.8 L1175 63.2 L1200 57.6 L1225 52.0 L1250 46.5 L1275 41.1 L1300 35.8 L1325 30.7 L1350 25.9 L1375 21.3 L1400 17.1 L1425 13.3 L1450 9.9 L1475 6.9 L1500 4.5 L1525 2.5 L1550 1.1 L1575 0.3 L1600 0.0 L1625 0.3 L1650 1.1 L1675 2.5 L1700 4.5 L1725 6.9 L1750 9.9 L1775 13.3 L1800 17.1 L1825 21.3 L1850 25.9 L1875 30.7 L1900 35.8 L1925 41.1 L1950 46.5 L1975 52.0 L2000 57.6 L2025 63.2 L2050 68.8 L2075 74.3 L2100 79.7 L2125 84.9 L2150 90.0 L2175 94.9 L2200 99.6 L2225 104.1 L2250 108.3 L2275 112.3 L2300 116.0 L2325 119.5 L2350 122.7 L2375 125.7 L2400 128.4 L2425 130.9 L2450 133.2 L2475 135.3 L2500 137.1 L2525 138.8 L2550 140.3 L2575 141.6 L2600 142.8 L2625 143.8 L2650 144.7 L2675 145.5 L2700 146.2 L2725 146.8 L2750 147.3 L2775 147.7 L2800 148.1 L2825 148.4 L2850 148.7 L2875 148.9 L2900 149.1 L2925 149.3 L2950 149.4 L2975 149.5 L3000 149.6 L3025 149.7 L3050 149.7 L3075 149.8 L3100 149.8 L3125 149.9 L3150 149.9 L3175 149.9 L3200 149.9 L3200 0 L0 0 Z" fill="#CEFEE3"/></svg></div>
 
 <main>
   <div class="main-inner">
