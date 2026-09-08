@@ -54,7 +54,14 @@ h1{margin:0.75% 0 0}
 .tagline{margin:-5% 0 0} /* the wordmark box's arc-end corners are empty; tuck the tagline up into them */
 h1 svg,.tagline svg{display:block; width:100%; overflow:visible}
 h1 path,.tagline path{fill:#202020}
-main{padding:34px 22px 44px}
+/* Anchor main to the divider's apex (the negative margin cancels the strip height
+   exactly — same clamp), then pad by the curve's depth at the content column's left
+   edge (linear fit) + 34px, so "Serving..." keeps a constant 34px gap to the pink. */
+main{
+  position:relative;
+  margin-top:calc(0px - clamp(22px, 10vw - 12px, 160px));
+  padding:min(9vw + 18px, 78px) 22px 44px;
+}
 h2{
   font-family:Petrona,Georgia,"Times New Roman",serif;
   font-weight:700; font-size:1.375rem; line-height:1.25;
