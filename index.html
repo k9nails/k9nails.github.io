@@ -34,13 +34,14 @@ body{
 }
 .band{
   background:#CEFEE3;
-  padding:28px 22px 18px;
+  padding:28px 22px 8px; /* apex of the divider curve snuggles the tagline */
   text-align:center;
 }
-/* The pink rule under the band, arched to echo the lockup's curves. Scales uniformly
-   so the dome keeps the same shape at every viewport width (fixed-height stretching
-   made it tight on phones and flat on desktops); transparent below the lower curve. */
-.band-curve{display:block; width:100%; height:auto; margin-top:-1px}
+/* The pink rule under the band. The curve is a FIXED 3200px-wide shape, centered and
+   cropped by the viewport, never stretched: the apex keeps the lockup's curvature
+   (r=1100) at every width, the pink stays 6px, and the tails ease to flat. */
+.band-curve{height:47px; overflow:hidden; position:relative; margin-top:-1px}
+.band-curve svg{position:absolute; left:50%; transform:translateX(-50%); display:block}
 .band-inner,.main-inner{max-width:620px; margin:0 auto}
 /* Dog, wordmark and tagline are one lockup. The lockup's width is the only size knob:
    the text lines are SVG (arched on a dome echoing the dog's arc) and scale with it. */
@@ -86,7 +87,7 @@ a.btn:hover{background:#FFA1C7}
   </div>
 </header>
 
-<svg class="band-curve" viewBox="0 0 375 38" aria-hidden="true"><path d="M0 38 Q187.5 6 375 38 L375 0 L0 0 Z" fill="#FFB6D3"/><path d="M0 32 Q187.5 0 375 32 L375 0 L0 0 Z" fill="#CEFEE3"/></svg>
+<div class="band-curve"><svg viewBox="0 0 3200 47" width="3200" height="47" aria-hidden="true"><path d="M0 46.0 L25 46.0 L50 46.0 L75 46.0 L100 46.0 L125 46.0 L150 46.0 L175 46.0 L200 46.0 L225 46.0 L250 46.0 L275 46.0 L300 46.0 L325 46.0 L350 46.0 L375 46.0 L400 46.0 L425 46.0 L450 46.0 L475 46.0 L500 46.0 L525 46.0 L550 46.0 L575 46.0 L600 46.0 L625 46.0 L650 46.0 L675 46.0 L700 46.0 L725 46.0 L750 46.0 L775 46.0 L800 46.0 L825 46.0 L850 45.9 L875 45.9 L900 45.8 L925 45.8 L950 45.7 L975 45.5 L1000 45.3 L1025 45.1 L1050 44.7 L1075 44.3 L1100 43.7 L1125 42.9 L1150 42.0 L1175 40.9 L1200 39.5 L1225 37.9 L1250 36.1 L1275 34.0 L1300 31.6 L1325 29.1 L1350 26.3 L1375 23.5 L1400 20.6 L1425 17.8 L1450 15.0 L1475 12.5 L1500 10.3 L1525 8.5 L1550 7.1 L1575 6.3 L1600 6.0 L1625 6.3 L1650 7.1 L1675 8.5 L1700 10.3 L1725 12.5 L1750 15.0 L1775 17.8 L1800 20.6 L1825 23.5 L1850 26.3 L1875 29.1 L1900 31.6 L1925 34.0 L1950 36.1 L1975 37.9 L2000 39.5 L2025 40.9 L2050 42.0 L2075 42.9 L2100 43.7 L2125 44.3 L2150 44.7 L2175 45.1 L2200 45.3 L2225 45.5 L2250 45.7 L2275 45.8 L2300 45.8 L2325 45.9 L2350 45.9 L2375 46.0 L2400 46.0 L2425 46.0 L2450 46.0 L2475 46.0 L2500 46.0 L2525 46.0 L2550 46.0 L2575 46.0 L2600 46.0 L2625 46.0 L2650 46.0 L2675 46.0 L2700 46.0 L2725 46.0 L2750 46.0 L2775 46.0 L2800 46.0 L2825 46.0 L2850 46.0 L2875 46.0 L2900 46.0 L2925 46.0 L2950 46.0 L2975 46.0 L3000 46.0 L3025 46.0 L3050 46.0 L3075 46.0 L3100 46.0 L3125 46.0 L3150 46.0 L3175 46.0 L3200 46.0 L3200 0 L0 0 Z" fill="#FFB6D3"/><path d="M0 40.0 L25 40.0 L50 40.0 L75 40.0 L100 40.0 L125 40.0 L150 40.0 L175 40.0 L200 40.0 L225 40.0 L250 40.0 L275 40.0 L300 40.0 L325 40.0 L350 40.0 L375 40.0 L400 40.0 L425 40.0 L450 40.0 L475 40.0 L500 40.0 L525 40.0 L550 40.0 L575 40.0 L600 40.0 L625 40.0 L650 40.0 L675 40.0 L700 40.0 L725 40.0 L750 40.0 L775 40.0 L800 40.0 L825 40.0 L850 39.9 L875 39.9 L900 39.8 L925 39.8 L950 39.7 L975 39.5 L1000 39.3 L1025 39.1 L1050 38.7 L1075 38.3 L1100 37.7 L1125 36.9 L1150 36.0 L1175 34.9 L1200 33.5 L1225 31.9 L1250 30.1 L1275 28.0 L1300 25.6 L1325 23.1 L1350 20.3 L1375 17.5 L1400 14.6 L1425 11.8 L1450 9.0 L1475 6.5 L1500 4.3 L1525 2.5 L1550 1.1 L1575 0.3 L1600 0.0 L1625 0.3 L1650 1.1 L1675 2.5 L1700 4.3 L1725 6.5 L1750 9.0 L1775 11.8 L1800 14.6 L1825 17.5 L1850 20.3 L1875 23.1 L1900 25.6 L1925 28.0 L1950 30.1 L1975 31.9 L2000 33.5 L2025 34.9 L2050 36.0 L2075 36.9 L2100 37.7 L2125 38.3 L2150 38.7 L2175 39.1 L2200 39.3 L2225 39.5 L2250 39.7 L2275 39.8 L2300 39.8 L2325 39.9 L2350 39.9 L2375 40.0 L2400 40.0 L2425 40.0 L2450 40.0 L2475 40.0 L2500 40.0 L2525 40.0 L2550 40.0 L2575 40.0 L2600 40.0 L2625 40.0 L2650 40.0 L2675 40.0 L2700 40.0 L2725 40.0 L2750 40.0 L2775 40.0 L2800 40.0 L2825 40.0 L2850 40.0 L2875 40.0 L2900 40.0 L2925 40.0 L2950 40.0 L2975 40.0 L3000 40.0 L3025 40.0 L3050 40.0 L3075 40.0 L3100 40.0 L3125 40.0 L3150 40.0 L3175 40.0 L3200 40.0 L3200 0 L0 0 Z" fill="#CEFEE3"/></svg></div>
 
 <main>
   <div class="main-inner">
