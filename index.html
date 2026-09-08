@@ -42,7 +42,7 @@ body{
 .logo{width:260px; max-width:100%; height:auto; display:block; margin:0 auto}
 h1{
   font-family:Petrona,Georgia,"Times New Roman",serif;
-  font-weight:700; font-size:clamp(2.6rem,11vw,4.25rem); line-height:1.1;
+  font-weight:700; font-size:4.25rem; line-height:1.1;
   margin:-8px 0 0; /* tuck the wordmark up under the arc the dog leans on */
   color:#202020;
 }
@@ -69,6 +69,11 @@ a.btn{
 }
 a.btn:hover{background:#FFA1C7}
 :focus-visible{outline:3px solid #0A5FA0; outline-offset:2px}
+/* Logo and wordmark are one lockup: 260px art to 4.25rem text. Scale them together, never independently. */
+@media (max-width:320px){
+  .logo{width:200px}
+  h1{font-size:3.25rem}
+}
 </style>
 </head>
 <body>
