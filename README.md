@@ -20,7 +20,8 @@ succeeded.
 | File | What it is |
 | --- | --- |
 | `index.html` | The entire website. |
-| `assets/logo.png` | The logo. |
+| `assets/logo.svg` | The logo. |
+| `assets/logo.png` | The picture shown when the site is linked on social media. |
 | `assets/favicon.png` | The little icon in the browser tab. |
 
 ## Hosting
