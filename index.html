@@ -49,10 +49,14 @@ h1{
   margin:0;
   color:#202020;
 }
-.tagline{margin:2px 0 0; font-size:1.5rem; line-height:1.2}
+.tagline{
+  margin:2px 0 0; font-size:1.5rem; line-height:1.2;
+  /* flush with the wordmark's edges: pad in by the wordmark's side inset, then justify the single line */
+  text-align:justify; text-align-last:justify;
+}
 @container (min-width:0px){
   h1{font-size:26cqw; margin-top:2cqw}
-  .tagline{font-size:9.5cqw; margin-top:3cqw}
+  .tagline{font-size:9.5cqw; margin-top:3cqw; padding:0 2.3cqw}
 }
 main{padding:34px 22px 44px}
 h2{
